@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AvaliacaoEDII.iml" afterDir="false" />
+    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="Select, Select modificado, Insert, implementados">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/InsertSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/InsertSortTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,8 +95,20 @@
       <workItem from="1652407249205" duration="3304000" />
       <workItem from="1652418194275" duration="5349000" />
       <workItem from="1652468432861" duration="3003000" />
-      <workItem from="1652495065178" duration="821000" />
+      <workItem from="1652495065178" duration="1753000" />
+      <workItem from="1652501229565" duration="935000" />
+      <workItem from="1652504840311" duration="1903000" />
+      <workItem from="1652548781570" duration="1125000" />
+      <workItem from="1652573832296" duration="3465000" />
     </task>
+    <task id="LOCAL-00001" summary="Select, Select modificado, Insert, implementados">
+      <created>1652496074180</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652496074180</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,5 +124,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Select, Select modificado, Insert, implementados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Select, Select modificado, Insert, implementados" />
   </component>
 </project>
