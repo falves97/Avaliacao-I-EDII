@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="Select, Select modificado, Insert, implementados">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/InsertSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/InsertSortTest.java" afterDir="false" />
+    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="QuickSort implementado">
+      <change afterPath="$PROJECT_DIR$/src/strategy/MergeSortModifiedStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/MergeSortStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/strategy/QuickSortStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/RandomString.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -99,7 +107,7 @@
       <workItem from="1652501229565" duration="935000" />
       <workItem from="1652504840311" duration="1903000" />
       <workItem from="1652548781570" duration="1125000" />
-      <workItem from="1652573832296" duration="3465000" />
+      <workItem from="1652573832296" duration="3769000" />
     </task>
     <task id="LOCAL-00001" summary="Select, Select modificado, Insert, implementados">
       <created>1652496074180</created>
@@ -108,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652496074180</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="QuickSort implementado">
+      <created>1652579639596</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652579639596</updated>
+    </task>
+    <task id="LOCAL-00003" summary="QuickSort implementado">
+      <created>1652579860467</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652579860467</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +149,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Select, Select modificado, Insert, implementados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Select, Select modificado, Insert, implementados" />
+    <MESSAGE value="QuickSort implementado" />
+    <option name="LAST_COMMIT_MESSAGE" value="QuickSort implementado" />
   </component>
 </project>
