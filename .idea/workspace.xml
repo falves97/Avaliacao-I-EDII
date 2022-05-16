@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="nome do branch alterado">
+    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="heap sort implementado">
+      <change afterPath="$PROJECT_DIR$/src/test/SortDoubleStringTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AvaliacaoEDII.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AvaliacaoEDII.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/InsertSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SortTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +78,8 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.test.MainTest">
-    <configuration name="test.MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SortDoubleStringTest.testOrdenarAscendThousand">
+    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.MainTest" />
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
@@ -93,7 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SortDoubleStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
         <pattern>
@@ -102,13 +101,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SortTest" />
+      <option name="MAIN_CLASS_NAME" value="test.SortDoubleStringTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortTest.testOrdenarChavesStringValoresDouble" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SortDoubleStringTest.testOrdenarAscend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
         <pattern>
@@ -117,7 +116,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SortTest" />
+      <option name="MAIN_CLASS_NAME" value="test.SortDoubleStringTest" />
+      <option name="METHOD_NAME" value="testOrdenarAscend" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortDoubleStringTest.testOrdenarAscendThousand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AvaliacaoEDII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SortDoubleStringTest" />
+      <option name="METHOD_NAME" value="testOrdenarAscendThousand" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortDoubleStringTest.testOrdenarChavesStringValoresDouble" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AvaliacaoEDII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SortDoubleStringTest" />
       <option name="METHOD_NAME" value="testOrdenarChavesStringValoresDouble" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -126,9 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SortDoubleStringTest.testOrdenarAscendThousand" />
+        <item itemvalue="JUnit.SortDoubleStringTest.testOrdenarAscend" />
+        <item itemvalue="JUnit.SortDoubleStringTest.testOrdenarChavesStringValoresDouble" />
         <item itemvalue="Application.test.MainTest" />
-        <item itemvalue="JUnit.SortTest.testOrdenarChavesStringValoresDouble" />
-        <item itemvalue="JUnit.InsertSortTest" />
+        <item itemvalue="JUnit.SortDoubleStringTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +187,7 @@
       <workItem from="1652573832296" duration="4086000" />
       <workItem from="1652583573080" duration="534000" />
       <workItem from="1652584117971" duration="1837000" />
-      <workItem from="1652643739776" duration="15271000" />
+      <workItem from="1652643739776" duration="19587000" />
     </task>
     <task id="LOCAL-00001" summary="Select, Select modificado, Insert, implementados">
       <created>1652496074180</created>
@@ -184,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652580089375</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="heap sort implementado">
+      <created>1652661337833</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652661337833</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,17 +257,7 @@
     <MESSAGE value="Select, Select modificado, Insert, implementados" />
     <MESSAGE value="QuickSort implementado" />
     <MESSAGE value="nome do branch alterado" />
-    <option name="LAST_COMMIT_MESSAGE" value="nome do branch alterado" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/strategy/HeapSortStrategy.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="heap sort implementado" />
+    <option name="LAST_COMMIT_MESSAGE" value="heap sort implementado" />
   </component>
 </project>
