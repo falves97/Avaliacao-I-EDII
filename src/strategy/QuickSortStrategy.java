@@ -1,30 +1,27 @@
 package strategy;
 
 import java.security.SecureRandom;
+import java.util.Comparator;
 import java.util.List;
 
 public class QuickSortStrategy<T extends Comparable<T>> implements SortStrategy<T> {
-    @Override
-    public void sortAscend(List<T> list) {
-        quick(list, 0, list.size() - 1, true);
+    private static <T> void exchange(List<T> list, int i, int j) {
+        T aux = list.get(i);
+        list.set(i, list.get(j));
+        list.set(j, aux);
     }
 
-    @Override
-    public void sortDescend(List<T> list) {
-        quick(list, 0, list.size() - 1, false);
-    }
-
-    private static <T extends Comparable<T>> void quick(List<T> list, int init, int last, boolean isAscend) {
+    private static <T extends Comparable<T>> void quick(List<T> list, int init, int last, Comparator<T> comparator) {
         int pivot;
 
-        if (init < last){
-            pivot = randomPartition(list, init, last, isAscend);
-            quick(list, init, pivot - 1, isAscend);
-            quick(list, pivot + 1, last, isAscend);
+        if (init < last) {
+            pivot = randomPartition(list, init, last, comparator);
+            quick(list, init, pivot - 1, comparator);
+            quick(list, pivot + 1, last, comparator);
         }
     }
 
-    private static <T extends Comparable<T>> int randomPartition(List<T> list, int init, int last, boolean isAscend) {
+    private static <T extends Comparable<T>> int randomPartition(List<T> list, int init, int last, Comparator<T> comparator) {
         SecureRandom secureRandom;
         int i;
         int j;
@@ -39,31 +36,14 @@ public class QuickSortStrategy<T extends Comparable<T>> implements SortStrategy<
         j = last;
 
         while (i <= j) {
-            if (isAscend) {
-                if (list.get(i).compareTo(pivot) <= 0) {
-                    i++;
-                }
-                else if (list.get(j).compareTo(pivot) > 0) {
-                    j--;
-                }
-                else {
-                    exchange(list, i, j);
-                    i++;
-                    j--;
-                }
-            }
-            else {
-                if (list.get(i).compareTo(pivot) > 0) {
-                    i++;
-                }
-                else if (list.get(j).compareTo(pivot) <= 0) {
-                    j--;
-                }
-                else {
-                    exchange(list, i, j);
-                    i++;
-                    j--;
-                }
+            if (comparator.compare(list.get(i), pivot) <= 0) {
+                i++;
+            } else if (comparator.compare(list.get(j), pivot) > 0) {
+                j--;
+            } else {
+                exchange(list, i, j);
+                i++;
+                j--;
             }
 
         }
@@ -73,9 +53,23 @@ public class QuickSortStrategy<T extends Comparable<T>> implements SortStrategy<
         return j;
     }
 
-    private static <T> void exchange(List<T> list, int i, int j) {
-        T aux = list.get(i);
-        list.set(i, list.get(j));
-        list.set(j, aux);
+    @Override
+    public void sort(List<T> list) {
+        quick(list, 0, list.size() - 1, Comparator.naturalOrder());
     }
+
+    @Override
+    public void sort(List<T> list, SortOrder sortOrder) {
+        if (sortOrder == SortOrder.ACSCENDING) {
+            sort(list);
+        } else {
+            quick(list, 0, list.size() - 1, Comparator.reverseOrder());
+        }
+    }
+
+    @Override
+    public void sort(List<T> list, Comparator<T> comparator) {
+        quick(list, 0, list.size() - 1, comparator);
+    }
+
 }

@@ -1,25 +1,11 @@
 package strategy;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
-public class MergeSortStrategy<T extends Comparable<T>> implements SortStrategy <T> {
-
-    @Override
-    public void sortAscend(List<T> list) {
-        List<T> listAux= merge(list, null, 0, list.size() - 1, true);
-        list.clear();
-        list.addAll(listAux);
-    }
-
-    @Override
-    public void sortDescend(List<T> list) {
-        List<T> listAux= merge(list, null, 0, list.size() - 1, false);
-        list.clear();
-        list.addAll(listAux);
-    }
-
-    private  <T extends Comparable<T>> void toMerge(List<T> arrayA, List<T> arrayB, int init, int middle, int last, boolean isAscend) {
+public class MergeSortStrategy<T extends Comparable<T>> implements SortStrategy<T> {
+    protected void toMerge(List<T> arrayA, List<T> arrayB, int init, int middle, int last, Comparator<T> comparator) {
         int initA;
         int initB;
         int posFree;
@@ -31,26 +17,14 @@ public class MergeSortStrategy<T extends Comparable<T>> implements SortStrategy 
         numElem = last - init + 1;
 
         while (initA <= middle && initB <= last) {
-            if (isAscend) {
-                if (arrayA.get(initA).compareTo(arrayA.get(initB)) <= 0) {
-                    arrayB.set(posFree, arrayA.get(initA));
-                    initA++;
-                }
-                else {
-                    arrayB.set(posFree, arrayA.get(initB));
-                    initB++;
-                }
+            if (comparator.compare(arrayA.get(initA), arrayA.get(initB)) <= 0) {
+                arrayB.set(posFree, arrayA.get(initA));
+                initA++;
+            } else {
+                arrayB.set(posFree, arrayA.get(initB));
+                initB++;
             }
-            else {
-                if (arrayA.get(initA).compareTo(arrayA.get(initB)) > 0) {
-                    arrayB.set(posFree, arrayA.get(initA));
-                    initA++;
-                }
-                else {
-                    arrayB.set(posFree, arrayA.get(initB));
-                    initB++;
-                }
-            }
+
 
             posFree++;
         }
@@ -72,7 +46,7 @@ public class MergeSortStrategy<T extends Comparable<T>> implements SortStrategy 
         }
     }
 
-    private <T extends Comparable<T>> List<T> merge(List<T> arrayA, List<T> arrayB, int init, int last, boolean isAscend) {
+    protected List<T> merge(List<T> arrayA, List<T> arrayB, int init, int last, Comparator<T> comparator) {
         int midle;
 
         if (arrayB == null) {
@@ -81,11 +55,38 @@ public class MergeSortStrategy<T extends Comparable<T>> implements SortStrategy 
 
         if (init < last) {
             midle = (init + last) / 2;
-            merge(arrayA, arrayB, init, midle, isAscend);
-            merge(arrayA, arrayB, midle + 1, last, isAscend);
-            toMerge(arrayA, arrayB, init, midle, last, isAscend);
+            merge(arrayA, arrayB, init, midle, comparator);
+            merge(arrayA, arrayB, midle + 1, last, comparator);
+            toMerge(arrayA, arrayB, init, midle, last, comparator);
         }
 
         return arrayB;
+    }
+
+
+    @Override
+    public void sort(List<T> list) {
+        List<T> listAux = merge(list, null, 0, list.size() - 1, Comparator.naturalOrder());
+        list.clear();
+        list.addAll(listAux);
+    }
+
+    @Override
+    public void sort(List<T> list, SortOrder sortOrder) {
+        if (sortOrder == SortOrder.ACSCENDING) {
+            sort(list);
+        } else {
+            List<T> listAux = merge(list, null, 0, list.size() - 1, Comparator.reverseOrder());
+            list.clear();
+            list.addAll(listAux);
+        }
+
+    }
+
+    @Override
+    public void sort(List<T> list, Comparator<T> comparator) {
+        List<T> listAux = merge(list, null, 0, list.size() - 1, comparator);
+        list.clear();
+        list.addAll(listAux);
     }
 }

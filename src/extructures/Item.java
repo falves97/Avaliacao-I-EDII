@@ -1,9 +1,9 @@
-package utils;
+package extructures;
 
 import java.util.Map;
 import java.util.Objects;
 
-public class Item<K extends Comparable<K>, V> implements Comparable<Item<K, V>>, Map.Entry {
+public class Item<K extends Comparable<K>, V> implements Comparable<Item<K, V>>, Map.Entry<K, V> {
     private K key;
     private V value;
 

@@ -1,16 +1,39 @@
-package utils;
+package extructures;
+
+import strategy.QuickSortStrategy;
+import strategy.SelectSortStrategy;
+import strategy.SortOrder;
+import strategy.SortStrategy;
 
 import java.util.*;
 
 public class Table<K extends Comparable<K>, V>  implements Map<K, V> {
-    private List<Item<K, V>> items;
+    private final List<Item<K, V>> items;
+    private SortStrategy<Item<K, V>> sortStrategy;
 
     public Table() {
         items = new ArrayList<>();
+        sortStrategy = new SelectSortStrategy<>();
     }
 
     public List<Item<K, V>> getItems() {
         return items;
+    }
+
+    public SortStrategy<Item<K, V>> getSortStrategy() {
+        return sortStrategy;
+    }
+
+    public void setSortStrategy(SortStrategy<Item<K, V>> sortStrategy) {
+        this.sortStrategy = sortStrategy;
+    }
+
+    public void sort() {
+        this.sortStrategy.sort(items);
+    }
+
+    public  void sort(SortOrder sortOrder) {
+        this.sortStrategy.sort(items, sortOrder);
     }
 
     @Override
@@ -25,7 +48,7 @@ public class Table<K extends Comparable<K>, V>  implements Map<K, V> {
 
     @Override
     public boolean containsKey(Object o) {
-        TreeSet<K> keys = (TreeSet<K>) this.keySet();
+        Set<K> keys = this.keySet();
 
         return keys.contains(o);
     }
@@ -80,9 +103,7 @@ public class Table<K extends Comparable<K>, V>  implements Map<K, V> {
 
     @Override
     public void clear() {
-        for (int i = 0; i < items.size(); i++) {
-            items.remove(i);
-        }
+        items.clear();
     }
 
     @Override
@@ -130,11 +151,11 @@ public class Table<K extends Comparable<K>, V>  implements Map<K, V> {
         if (this == o) return true;
         if (!(o instanceof Table)) return false;
         Table<?, ?> table = (Table<?, ?>) o;
-        return getItems().equals(table.getItems());
+        return Objects.equals(items, table.items);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getItems());
+        return Objects.hash(items);
     }
 }
