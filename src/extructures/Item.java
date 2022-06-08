@@ -56,6 +56,6 @@ public class Item<K extends Comparable<K>, V> implements Comparable<Item<K, V>>,
 
     @Override
     public int hashCode() {
-        return Objects.hash(getKey(), getValue());
+        return Objects.hash(getKey());
     }
 }

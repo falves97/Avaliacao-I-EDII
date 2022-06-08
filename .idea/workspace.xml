@@ -7,22 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="heap sort implementado">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="refatoração">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AvaliacaoEDII.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AvaliacaoEDII.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/HeapSortStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/HeapSortStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/InsertSortStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/InsertSortStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/MergeSortModifiedStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/MergeSortModifiedStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/MergeSortStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/MergeSortStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/QuickSortStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/QuickSortStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/SelectSortModifiedStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/SelectSortModifiedStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/SelectSortStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/SelectSortStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/strategy/SortStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy/SortStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/MainTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SortDoubleStringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SortDoubleStringTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extructures/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extructures/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -104,11 +92,42 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.30529955&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.HashTableTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Main" />
+      <module name="AvaliacaoEDII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AvaliacaoEDII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.HashTableTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SortDoubleStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
@@ -126,6 +145,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HashTableTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SortDoubleStringTest" />
       </list>
     </recent_temporary>
@@ -154,7 +175,11 @@
       <workItem from="1652584117971" duration="1837000" />
       <workItem from="1652643739776" duration="19587000" />
       <workItem from="1654354562031" duration="6156000" />
-      <workItem from="1654368258147" duration="4716000" />
+      <workItem from="1654368258147" duration="5320000" />
+      <workItem from="1654382826839" duration="4151000" />
+      <workItem from="1654444213437" duration="599000" />
+      <workItem from="1654626177304" duration="6766000" />
+      <workItem from="1654639167027" duration="8796000" />
     </task>
     <task id="LOCAL-00001" summary="Select, Select modificado, Insert, implementados">
       <created>1652496074180</created>
@@ -191,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652661337833</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refatoração">
+      <created>1654373207459</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654373207459</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +257,7 @@
     <MESSAGE value="QuickSort implementado" />
     <MESSAGE value="nome do branch alterado" />
     <MESSAGE value="heap sort implementado" />
-    <option name="LAST_COMMIT_MESSAGE" value="heap sort implementado" />
+    <MESSAGE value="refatoração" />
+    <option name="LAST_COMMIT_MESSAGE" value="refatoração" />
   </component>
 </project>
