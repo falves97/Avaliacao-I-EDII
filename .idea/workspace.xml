@@ -7,10 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="refatoração">
+    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="implementação básica de uma hash table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extructures/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extructures/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/HashTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/extructures/HashTableTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -99,13 +98,18 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.HashTableTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="extructures.trees" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TreeSetAVLTest">
+    <configuration name="test.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Main" />
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="test.extructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +121,12 @@
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="test.extructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.HashTableTest" />
+      <option name="PACKAGE_NAME" value="test.extructures" />
+      <option name="MAIN_CLASS_NAME" value="test.extructures.HashTableTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,7 +136,7 @@
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="test.extructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,11 +147,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TreeSetAVLTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AvaliacaoEDII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.extructures.trees.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.extructures.trees" />
+      <option name="MAIN_CLASS_NAME" value="test.extructures.trees.TreeSetAVLTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TreeSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AvaliacaoEDII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.extructures.trees.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.extructures.trees" />
+      <option name="MAIN_CLASS_NAME" value="test.extructures.trees.TreeSetTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HashTableTest" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TreeSetAVLTest" />
+        <item itemvalue="JUnit.TreeSetTest" />
         <item itemvalue="JUnit.SortDoubleStringTest" />
+        <item itemvalue="JUnit.HashTableTest" />
+        <item itemvalue="Application.test.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +215,11 @@
       <workItem from="1654382826839" duration="4151000" />
       <workItem from="1654444213437" duration="599000" />
       <workItem from="1654626177304" duration="6766000" />
-      <workItem from="1654639167027" duration="8796000" />
+      <workItem from="1654639167027" duration="9162000" />
+      <workItem from="1654788616425" duration="5239000" />
+      <workItem from="1654818206161" duration="2357000" />
+      <workItem from="1654879518749" duration="8723000" />
+      <workItem from="1654903318410" duration="6181000" />
     </task>
     <task id="LOCAL-00001" summary="Select, Select modificado, Insert, implementados">
       <created>1652496074180</created>
@@ -223,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654373207459</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="implementação básica de uma hash table">
+      <created>1654651162664</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654651162664</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +305,23 @@
     <MESSAGE value="nome do branch alterado" />
     <MESSAGE value="heap sort implementado" />
     <MESSAGE value="refatoração" />
-    <option name="LAST_COMMIT_MESSAGE" value="refatoração" />
+    <MESSAGE value="implementação básica de uma hash table" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementação básica de uma hash table" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/extructures/trees/TreeSetAVLTest.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Avaliacao_I_EDII$TreeSetTest.ic" NAME="TreeSetTest Coverage Results" MODIFIED="1654881067321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.extructures.trees.*</FILTER>
+    </SUITE>
   </component>
 </project>

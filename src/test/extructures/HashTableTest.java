@@ -1,4 +1,4 @@
-package test;
+package test.extructures;
 
 import extructures.HashTable;
 import org.junit.jupiter.api.Assertions;
