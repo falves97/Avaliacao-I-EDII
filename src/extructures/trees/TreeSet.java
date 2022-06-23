@@ -2,6 +2,7 @@ package extructures.trees;
 
 import extructures.ExtructuriesStrategy;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.function.Consumer;
 
 public class TreeSet<T extends Comparable<T>> implements ExtructuriesStrategy<T> {
@@ -28,23 +29,66 @@ public class TreeSet<T extends Comparable<T>> implements ExtructuriesStrategy<T>
         return Math.max(treeL, treeR) + 1;
     }
 
-    protected Node<T> insertData(Node<T> root, T data) {
-        Node<T> node;
-        Node<T> father = null;
+    protected Node<T> leftSimpleRotation(Node<T> root) {
+        Node<T> aux = null;
 
         if (root != null) {
-            father = root.getFather();
+            aux = root.getRight();
+            root.setRight(aux.getLeft());
+            aux.setLeft(root);
+            aux.setFather(root.getFather());
+            root.setFather(aux);
+
+            if (root.getRight() != null) {
+                root.getRight().setFather(root);
+            }
+        }
+
+        return aux;
+    }
+
+    protected Node<T> rightSimpleRotation(Node<T> root) {
+        Node<T> aux = null;
+
+        if (root != null) {
+            aux = root.getLeft();
+            root.setLeft(aux.getRight());
+            aux.setRight(root);
+            aux.setFather(root.getFather());
+            root.setFather(aux);
+
+            if (root.getLeft() != null) {
+                root.getLeft().setFather(root);
+            }
+        }
+
+        return aux;
+    }
+
+    protected Node<T> leftDoubleRotation(Node<T> root) {
+        root.setRight(rightSimpleRotation(root.getRight()));
+        return leftSimpleRotation(root);
+    }
+
+    protected Node<T> rightDoubleRatation(Node<T> root) {
+        root.setLeft(leftSimpleRotation(root.getLeft()));
+        return rightSimpleRotation(root);
+    }
+
+    protected Node<T> insertData(Node<T> root, Node<T> father, Node<T> newNode, T data) {
+
+        if (root != null) {
 
             if (data.compareTo(root.getData()) > 0) {
 
-                node = insertData(root.getRight(), data);
-                root.setRight(node);
+                newNode = insertData(root.getRight(), root, newNode, data);
+                root.setRight(newNode);
 
                 return root;
             } else if (data.compareTo(root.getData()) < 0) {
 
-                node = insertData(root.getLeft(), data);
-                root.setLeft(node);
+                newNode = insertData(root.getLeft(), root, newNode, data);
+                root.setLeft(newNode);
 
                 return root;
             } else {
@@ -53,11 +97,11 @@ public class TreeSet<T extends Comparable<T>> implements ExtructuriesStrategy<T>
             }
         }
 
-        node = new Node<>(data);
-        node.setFather(father);
+        newNode.setData(data);
+        newNode.setFather(father);
         size++;
 
-        return node;
+        return newNode;
     }
 
     protected T findData(Node<T> root, T data) {
@@ -148,8 +192,8 @@ public class TreeSet<T extends Comparable<T>> implements ExtructuriesStrategy<T>
     }
 
     @Override
-    public void insert(T data) {
-        root = insertData(root, data);
+    public void add(T data) {
+        root = insertData(root, null, new Node<>(), data);
     }
 
     @Override
@@ -158,7 +202,7 @@ public class TreeSet<T extends Comparable<T>> implements ExtructuriesStrategy<T>
     }
 
     @Override
-    public T delete(T data) {
+    public T remove(T data) {
         Node<T> deletedNode = new Node<>();
 
         root = deleteData(root, data, deletedNode);

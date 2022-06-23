@@ -2,52 +2,6 @@ package extructures.trees;
 
 public class TreeSetAVL<T extends Comparable<T>> extends TreeSet<T> {
 
-    protected Node<T> leftSimpleRotation(Node<T> root) {
-        Node<T> aux = null;
-
-        if (root != null) {
-            aux = root.getRight();
-            root.setRight(aux.getLeft());
-            aux.setLeft(root);
-            aux.setFather(root.getFather());
-            root.setFather(aux);
-
-            if (root.getRight() != null) {
-                root.getRight().setFather(root);
-            }
-        }
-
-        return aux;
-    }
-
-    protected Node<T> rightSimpleRotation(Node<T> root) {
-        Node<T> aux = null;
-
-        if (root != null) {
-            aux = root.getLeft();
-            root.setLeft(aux.getRight());
-            aux.setRight(root);
-            aux.setFather(root.getFather());
-            root.setFather(aux);
-
-            if (root.getLeft() != null) {
-                root.getLeft().setFather(root);
-            }
-        }
-
-        return aux;
-    }
-
-    protected Node<T> leftDoubleRotation(Node<T> root) {
-        root.setRight(rightSimpleRotation(root.getRight()));
-        return leftSimpleRotation(root);
-    }
-
-    protected Node<T> rightDoubleRatation(Node<T> root) {
-        root.setLeft(leftSimpleRotation(root.getLeft()));
-        return rightSimpleRotation(root);
-    }
-
     protected Node<T> balance(Node<T> root) {
         long leftH = height(root.getLeft());
         long rightH = height(root.getRight());
@@ -79,14 +33,14 @@ public class TreeSetAVL<T extends Comparable<T>> extends TreeSet<T> {
     }
 
     @Override
-    public void insert(T data) {
-        super.insert(data);
+    public void add(T data) {
+        super.add(data);
         root = balance(root);
     }
 
     @Override
-    public T delete(T data) {
-        T deletedData = super.delete(data);
+    public T remove(T data) {
+        T deletedData = super.remove(data);
         root = balance(root);
         return deletedData;
     }

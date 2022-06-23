@@ -16,7 +16,7 @@ public class TreeSetTest {
     private void init() {
         integerTreeSet = new TreeSet<>();
         elements = Arrays.asList(7, 6, 9, 3, 4, 5, 8);
-        elements.forEach(e -> integerTreeSet.insert(e));
+        elements.forEach(e -> integerTreeSet.add(e));
     }
 
     @Test
@@ -31,12 +31,12 @@ public class TreeSetTest {
 
     @Test
     public void testInsercaoRepetida() {
-        integerTreeSet.insert(4);
+        integerTreeSet.add(4);
         Assertions.assertEquals(integerTreeSet.size(), elements.size());
     }
 
     private void remove(int removed) {
-        int dataRemoved = integerTreeSet.delete(removed);
+        int dataRemoved = integerTreeSet.remove(removed);
         Assertions.assertEquals(dataRemoved, removed);
         System.out.println("============= Teste Remoção " + removed + " =============");
         integerTreeSet.forEach(System.out::println);
