@@ -1,4 +1,4 @@
-package extructures.trees;
+package extructures.trees.node;
 
 public enum NodeColor {
     BLACK,

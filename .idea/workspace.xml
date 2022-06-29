@@ -7,15 +7,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="implementação básica de uma hash table">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4923783f-0fc6-433f-aa92-a72607cfc081" name="Changes" comment="Correção de bugs e implementação de incerção em árvore RB">
+      <change afterPath="$PROJECT_DIR$/src/extructures/trees/RBTreeSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/extructures/trees/AVLTreeSetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/extructures/trees/RBTreeSetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AvaliacaoEDII.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AvaliacaoEDII.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extructures/ExtructuriesStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/ExtructuriesStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extructures/trees/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/trees/node/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extructures/trees/NodeColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/trees/node/NodeColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extructures/trees/NodeRB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/trees/node/RBNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/extructures/trees/TreeSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/trees/TreeSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extructures/trees/TreeSetAVL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/trees/TreeSetAVL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/extructures/trees/TreeSetAVLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/extructures/trees/TreeSetAVLTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/extructures/trees/TreeSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/extructures/trees/TreeSetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extructures/trees/TreeSetAVL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/extructures/trees/AVLTreeSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extructures/trees/TreeSetRB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/extructures/trees/TreeSetAVLTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/extructures/trees/TreeSetRBTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,38 +113,8 @@
       <recent name="extructures.trees" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TreeSetRBTest">
-    <configuration name="HashTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AvaliacaoEDII" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.extructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.extructures" />
-      <option name="MAIN_CLASS_NAME" value="test.extructures.HashTableTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SortDoubleStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AvaliacaoEDII" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.extructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.SortDoubleStringTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TreeSetAVLTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BTreeSetTest.testInsercao">
+    <configuration name="AVLTreeSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
         <pattern>
@@ -149,13 +123,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test.extructures.trees" />
-      <option name="MAIN_CLASS_NAME" value="test.extructures.trees.TreeSetAVLTest" />
+      <option name="MAIN_CLASS_NAME" value="test.extructures.trees.AVLTreeSetTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeSetRBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BTreeSetTest.testInsercao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AvaliacaoEDII" />
       <extension name="coverage">
         <pattern>
@@ -164,7 +138,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test.extructures.trees" />
-      <option name="MAIN_CLASS_NAME" value="test.extructures.trees.TreeSetRBTest" />
+      <option name="MAIN_CLASS_NAME" value="test.extructures.trees.BTreeSetTest" />
+      <option name="METHOD_NAME" value="testInsercao" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RBTreeSetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AvaliacaoEDII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.extructures.trees.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.extructures.trees" />
+      <option name="MAIN_CLASS_NAME" value="test.extructures.trees.RBTreeSetTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,13 +176,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TreeSetTest.testInstaciacao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AvaliacaoEDII" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.extructures.trees.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.extructures.trees" />
+      <option name="MAIN_CLASS_NAME" value="test.extructures.trees.TreeSetTest" />
+      <option name="METHOD_NAME" value="testInstaciacao" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.BTreeSetTest.testInsercao" />
+      <item itemvalue="JUnit.AVLTreeSetTest" />
+      <item itemvalue="JUnit.RBTreeSetTest" />
+      <item itemvalue="JUnit.TreeSetTest" />
+      <item itemvalue="JUnit.TreeSetTest.testInstaciacao" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TreeSetRBTest" />
-        <item itemvalue="JUnit.TreeSetAVLTest" />
+        <item itemvalue="JUnit.BTreeSetTest.testInsercao" />
+        <item itemvalue="JUnit.AVLTreeSetTest" />
         <item itemvalue="JUnit.TreeSetTest" />
-        <item itemvalue="JUnit.SortDoubleStringTest" />
-        <item itemvalue="JUnit.HashTableTest" />
+        <item itemvalue="JUnit.RBTreeSetTest" />
+        <item itemvalue="JUnit.TreeSetTest.testInstaciacao" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +248,22 @@
       <workItem from="1655912525066" duration="4024000" />
       <workItem from="1655940981848" duration="2794000" />
       <workItem from="1655945280000" duration="1643000" />
-      <workItem from="1655952418219" duration="2363000" />
+      <workItem from="1655952418219" duration="3158000" />
+      <workItem from="1656006784214" duration="5056000" />
+      <workItem from="1656035133885" duration="599000" />
+      <workItem from="1656049934100" duration="2570000" />
+      <workItem from="1656104754456" duration="4660000" />
+      <workItem from="1656114751401" duration="2131000" />
+      <workItem from="1656127040196" duration="6155000" />
+      <workItem from="1656204098307" duration="342000" />
+      <workItem from="1656216295713" duration="10583000" />
+      <workItem from="1656235644260" duration="2961000" />
+      <workItem from="1656282210376" duration="3680000" />
+      <workItem from="1656377437215" duration="6996000" />
+      <workItem from="1656401410325" duration="1374000" />
+      <workItem from="1656442379760" duration="600000" />
+      <workItem from="1656449509087" duration="5634000" />
+      <workItem from="1656464244198" duration="5777000" />
     </task>
     <task id="LOCAL-00001" summary="Select, Select modificado, Insert, implementados">
       <created>1652496074180</created>
@@ -285,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654651162664</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Correção de bugs e implementação de incerção em árvore RB">
+      <created>1655954974489</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655954974489</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,21 +357,14 @@
     <MESSAGE value="heap sort implementado" />
     <MESSAGE value="refatoração" />
     <MESSAGE value="implementação básica de uma hash table" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementação básica de uma hash table" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/extructures/trees/TreeSetRBTest.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Correção de bugs e implementação de incerção em árvore RB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção de bugs e implementação de incerção em árvore RB" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Avaliacao_I_EDII$TreeSetTest.ic" NAME="TreeSetTest Coverage Results" MODIFIED="1654881067321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.extructures.trees.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Avaliacao_I_EDII$BTreeSetTest_testInsercao.ic" NAME="BTreeSetTest.testInsercao Coverage Results" MODIFIED="1656469964453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.extructures.trees.*</FILTER>
     </SUITE>
   </component>

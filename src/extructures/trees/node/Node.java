@@ -1,4 +1,4 @@
-package extructures.trees;
+package extructures.trees.node;
 
 public class Node<T extends Comparable<T>> {
     private T data;
@@ -43,5 +43,12 @@ public class Node<T extends Comparable<T>> {
 
     public void setFather(Node<T> father) {
         this.father = father;
+    }
+
+    public void of(Node<T> node) {
+        setFather(node.getFather());
+        setRight(node.getRight());
+        setLeft(node.getLeft());
+        setData(node.getData());
     }
 }

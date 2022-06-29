@@ -1,8 +1,10 @@
 package extructures.trees;
 
-public class TreeSetAVL<T extends Comparable<T>> extends TreeSet<T> {
+import extructures.trees.node.Node;
 
-    protected Node<T> balance(Node<T> root) {
+public class AVLTreeSet<T extends Comparable<T>> extends TreeSet<T> {
+
+    protected void balance(Node<T> root) {
         long leftH = height(root.getLeft());
         long rightH = height(root.getRight());
 
@@ -12,9 +14,9 @@ public class TreeSetAVL<T extends Comparable<T>> extends TreeSet<T> {
             long sonRightH = height(son.getRight());
 
             if (sonRightH - sonLeftH >= 0) {
-                return leftSimpleRotation(root);
+                leftSimpleRotation(root);
             } else {
-                return leftDoubleRotation(root);
+                leftDoubleRotation(root);
             }
         }
         else if (leftH - rightH == 2) {
@@ -23,25 +25,23 @@ public class TreeSetAVL<T extends Comparable<T>> extends TreeSet<T> {
             long sonRightH = height(son.getRight());
 
             if (sonLeftH - sonRightH >= 0) {
-                return rightSimpleRotation(root);
+                rightSimpleRotation(root);
             } else {
-                return rightDoubleRatation(root);
+                rightDoubleRotation(root);
             }
         }
-
-        return root;
     }
 
     @Override
     public void add(T data) {
         super.add(data);
-        root = balance(root);
+        balance(root);
     }
 
     @Override
     public T remove(T data) {
         T deletedData = super.remove(data);
-        root = balance(root);
+        balance(root);
         return deletedData;
     }
 }
